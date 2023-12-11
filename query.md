@@ -13,4 +13,7 @@ SELECT * FROM fatture
 JOIN clienti ON fatture.id_cliente = clienti.numero_cliente
 WHERE importo < 1000;
 
+SELECT numero_fattura, importo, iva, data_fatturata, denominazione from fatture
+JOIN fornitori USING(numero_fornitore);
+
 ```
